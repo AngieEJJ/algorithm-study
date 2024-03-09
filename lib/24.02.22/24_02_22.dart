@@ -8,14 +8,20 @@ void main() {
 }
 
 
-List<bool> flickSwitch(List<String> list) {
-  final List<bool> finalList = [];
-  bool change = true;
-  for (String value in list) {
-    if (value == 'flick') {
-      change = !change;
-    }
-    finalList.add(change);
-  }
-  return finalList;
+// List<bool> flickSwitch(List<String> list) {
+//   final List<bool> finalList = [];
+//   bool change = true;
+//   for (String value in list) {
+//     if (value == 'flick') {
+//       change = !change;
+//     }
+//     finalList.add(change);
+//   }
+//   return finalList;
+// }
+
+
+List<bool> flickSwitch(List<String> lst) {
+  bool s = true;
+  return lst.map((x) => s = x == 'flick' ? !s : s).toList();
 }
