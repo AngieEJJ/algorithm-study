@@ -1,20 +1,21 @@
-void main () {
-  List<String> list1 = ['code', 'wars', 'flick', 'het'];
-  List<String> list2 = ['flick', 'wars', 'flick', 'het'];
+//Q. Flick Switch
+//Create a function that always returns True/true for every item in a given list.
+//However, if an element is the word 'flick', switch to always returning the opposite boolean value.
+
+void main() {
+  List<String> list = ['code', 'wars', 'flick', 'het'];
+  print(flickSwitch(list));
 }
 
 
 List<bool> flickSwitch(List<String> list) {
+  final List<bool> finalList = [];
   bool change = true;
-  final List<bool> result = [];
-
-  for (int i = 0; i < list.length; i++) {
-    if (list[i] == 'flick') {
-      change =! change;
+  for (String value in list) {
+    if (value == 'flick') {
+      change = !change;
     }
-    result.add(change);
+    finalList.add(change);
   }
-
-  print(result);
-  return result;
+  return finalList;
 }
